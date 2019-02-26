@@ -12,9 +12,55 @@
 <body>
 
     <div class="container" >
-        <div class="panel text-center panel-primary">     
-            <div class="panel-text title"><h1 style='font-size:24px'> Trivia </h1></div>
+        <div class="panel text-center panel-primary">
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="panel-text title"><h1 style='font-size:24px'> Trivia</h1></div>
+                    <div class="paenl-text instructions">
+                        <h5>With only 10 seconds a question, can you answer all 10 questions correctly?</h5>
+                        <p>Harder questions give you more points! However, incorrect answers lose more points too. Difficulty changes apply on next iteration.</p>
+                        <p>Easy = 1 point, Medium = 2 points, Hard = 3 points</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="records">Difficulty:</label>
+                        <br>
+                        <select name="numRecords" id="records" style=" background-color: white; height: 34px;">
+                                <option value="easy">easy</option>
+                                <option value="medium">medium</option>
+                                <option value="hard">hard</option>
+                        </select>
+                    </div> 
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Data</div>
+                        <div class="panel-body">
+                            <ul class="list" style="width: 100%; padding-left: 0; margin: auto;">
+                                <li class="list-group-item">
+                                    Points:
+                                    <span id="points">0</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Wins:
+                                    <span id="ws">0</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Losses:
+                                    <span id="ls">0</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Current Difficulty:
+                                    <span id="curdif"> easy</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="panel-text text-center timer"> Time Left: </div>
+            
             <div style="margin: 20px"> 
                 <div class="row">
                     <div class="col-sm-12">
@@ -23,7 +69,7 @@
                                 Question
                             </div>
                             <div class="panel-body question">
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <p class="panel-text">With supporting text below as a natural lead-in to additional content.</p>
                             </div>
                         </div>
                     </div>
