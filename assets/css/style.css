@@ -4,17 +4,19 @@
 
 ***********Gradient Section****************/
 
-.data,select{
+.data{
 	/*width: 100wh;*/
 	/*height: 90vh;*/
 	color: #fff;
-	background: linear-gradient(-45deg, #f2dede, #fcf8e3, #d9edf7, #dff0d8);
+	background: linear-gradient(-45deg,  #23A6D5, cyan, aquamarine, #23D5AB);
 	background-size: 1000% 1000%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
 	font-size: 1.2em;
 }
+
+select:focus {outline:0;}
 
 body {
 	/*width: 100wh;*/
