@@ -5,6 +5,7 @@
     <title>Trivia!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -34,7 +35,7 @@
                     </div> 
                 </div>
                 <div class="col-sm-4">
-                    <div class="panel panel-info">
+                    <div class="panel panel-info" style="margin: 20px">
                         <div class="panel-heading">Data</div>
                         <div class="panel-body">
                             <ul class="list" style="width: 100%; padding-left: 0; margin: auto;">
@@ -61,12 +62,16 @@
             </div>
             <div class="panel panel-success gameControl" style="margin: 20px">
                 <div class="panel-heading gameMessages">Press Play to begin</div>
-                <br>
+                
+                <div class="panel-text text-center timeLeft" style="margin: 20px"> Time Left: </div>
+
                 <button class="btn-secondary"  id="play">Play</a>
                 <button class="btn-secondary"  id="skip">Skip</a>
-                <button class="btn-secondary"  id="reset">Reset Game</a>
+                <button class="btn-secondary"  id="reset" style="margin-bottom: 10px;">Reset Game</a>
+
+                
             </div>
-            <div class="panel-text text-center timeLeft"> Time Left: </div>
+            
             
             <div style="margin: 20px"> 
                 <div class="row">
