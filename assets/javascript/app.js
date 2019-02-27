@@ -195,8 +195,7 @@ $(document).ready(function() {
             clearInterval(time);
 
             $("#play").prop("disabled", false);
-            
-            $(".gameControl").removeClass("panel-info");
+            $(".gameControl").removeClass("panel-danger");
             $(".gameControl").removeClass("panel-warning");
             $(".gameControl").addClass("panel-success");
             $(".gameMessages").text("Round " + round + ": Correct!");
@@ -214,10 +213,9 @@ $(document).ready(function() {
             canPlay = true;
             clearInterval(time);
             $("#play").prop("disabled", false);
-            
+            $(".gameControl").removeClass("panel-warning");
             $(".gameControl").removeClass("panel-success");
-            $(".gameControl").removeClass("panel-info");
-            $(".gameControl").addClass("panel-warning");
+            $(".gameControl").addClass("panel-danger");
 
             var temp = "#a" + randomSet[3];
             //$(temp).text(response.results[0].correct_answer);
