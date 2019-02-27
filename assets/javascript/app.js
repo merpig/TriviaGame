@@ -22,6 +22,8 @@ $(document).ready(function() {
     var styleColor = "";
     var time;
 
+
+
     function timer(){
         
         var timeleft = 10;
@@ -110,6 +112,7 @@ $(document).ready(function() {
     }
 
     $("#play").on("click", function(){
+        event.preventDefault()
 
         if(canPlay && round < 10){
 
@@ -138,6 +141,7 @@ $(document).ready(function() {
     });
 
     $("#skip").on("click", function(){
+        event.preventDefault()
         if(round >= 10){
             $(".gameControl").addClass("panel-success");
             $(".gameControl").removeClass("panel-danger");
@@ -182,14 +186,14 @@ $(document).ready(function() {
     });
 
     $(".btn-primary").on("click", function(){
-        
+        event.preventDefault()
         
         if(this.id===String("b"+randomSet[3]) && canPlay===false) {
-            $(this).text("Correct!").css("background-color","lightgreen");
+            $(this).text("Correct!").css("background-color","green");
             wins++;
-            if(difficulty==="easy") { points += 1; }
-            if(difficulty==="medium") { points += 2; }
-            if(difficulty==="hard") { points += 3; }
+            if(difficulty==="easy") { points += 1; styleColor= "green";}
+            if(difficulty==="medium") { points += 2; styleColor= "orange";}
+            if(difficulty==="hard") { points += 3; styleColor= "red";}
             
             canPlay = true;
             clearInterval(time);
@@ -203,11 +207,13 @@ $(document).ready(function() {
             
         }
 
+        
+
         else if(this.id!==String("b"+randomSet[3]) && canPlay===false) {
             $(this).text("Incorrect!").css("background-color","red");
             losses++;
             if(difficulty==="easy") { points -= 1; styleColor= "green";}
-            if(difficulty==="medium") { points -= 2; styleColor= "yellow";}
+            if(difficulty==="medium") { points -= 2; styleColor= "orange";}
             if(difficulty==="hard") { points -= 3; styleColor= "red";}
             
             canPlay = true;
