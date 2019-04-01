@@ -3,7 +3,7 @@ A game of trivia!
 
 Press play to start and select correct answers to gain points. How many can you get?
 
-- Github Pages Link: [TriviaGame](merpig.github.io/TriviaGame)
+- Github Pages Link: [TriviaGame](https://merpig.github.io/TriviaGame)
 
 ## Made with:
 - [x] Html
