@@ -106,7 +106,6 @@ $(document).ready(function() {
             parsedQ2 = parsedQ.replace(pattern,"");
 
             $(".question").text(parsedQ2);
-            console.log(response.results[0].question);
             for(var i = 0; i<3; i++){
                 var tempClass = "#a" + randomSet[i];
                 $(tempClass).text(tempArr[i]);
