@@ -98,8 +98,15 @@ $(document).ready(function() {
 
             var tempArr = response.results[0].incorrect_answers;
             shuffleArray(randomSet);
-            $(".question").text(response.results[0].question);
+            var parsedQ = "";
+            var parsedQ2 = "";
+            var pattern = /&quot;|&#039;|&Uuml;/ig;
+            var patternAMP = /&amp;/ig;
+            parsedQ = response.results[0].question.replace(patternAMP,"&");
+            parsedQ2 = parsedQ.replace(pattern,"");
 
+            $(".question").text(parsedQ2);
+            console.log(response.results[0].question);
             for(var i = 0; i<3; i++){
                 var tempClass = "#a" + randomSet[i];
                 $(tempClass).text(tempArr[i]);
